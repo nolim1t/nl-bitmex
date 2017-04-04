@@ -1,6 +1,6 @@
 # BitMex library
 
-My own bitmex library
+My own bitmex library. Reference library [here](https://github.com/BitMEX/api-connectors/blob/master/official-http/node-request/index.js)
 
 ## Example code
 
