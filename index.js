@@ -9,7 +9,7 @@ module.exports = {
   },
   openorders: (info, callback) => {
     privateapi.openorders(info, function(orderscb) {
-      callback(orderscb.);
+      callback(orderscb);
     })
   }
 };
