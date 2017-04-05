@@ -17,7 +17,7 @@ My own bitmex library. Reference library [here](https://github.com/BitMEX/api-co
 ##### Example code
 
 ```javascript
-t.openorders({siteprefix: "www"}, function(c) {
+t.orders({siteprefix: "www"}, function(c) {
   console.log(c);
 });
 ```
@@ -40,7 +40,7 @@ This gets the positions of open and closed orders, or open only.
 ##### Example code
 
 ```javascript
-t.currentposition({siteprefix: "www", isopen: true}, function(c) {
+t.position({siteprefix: "www", isopen: true}, function(c) {
   console.log(c);
 })
 ```

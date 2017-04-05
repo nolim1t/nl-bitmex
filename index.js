@@ -7,13 +7,13 @@ module.exports = {
       callback(instrumentcb);
     })
   },
-  openorders: (info, callback) => {
-    privateapi.openorders(info, (orderscb) => {
+  orders: (info, callback) => {
+    privateapi.getorders(info, (orderscb) => {
       callback(orderscb);
     })
   },
-  currentposition: (info, callback) => {
-    privateapi.currentposition(info, (positioncb) => {
+  position: (info, callback) => {
+    privateapi.getposition(info, (positioncb) => {
       callback(positioncb);
     })
   }
