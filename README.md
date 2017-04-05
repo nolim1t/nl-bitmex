@@ -4,15 +4,17 @@ My own bitmex library. Reference library [here](https://github.com/BitMEX/api-co
 
 ## Example code
 
-### Get Open orders
+### Orders
 
-#### Parameters
+#### Get Open orders
+
+##### Parameters
 
 * apikey (but can use environment variable too)
 * apisecret (but can use environment variable too)
 * siteprefix (Defaults to 'testnet')
 
-#### Example code
+##### Example code
 
 ```javascript
 t.openorders({siteprefix: "www"}, function(c) {
