@@ -17,7 +17,7 @@ My own bitmex library. Reference library [here](https://github.com/BitMEX/api-co
 ##### Example code
 
 ```javascript
-t.orders({siteprefix: "www"}, function(c) {
+bitmex.orders({siteprefix: "www"}, function(c) {
   console.log(c);
 });
 ```
@@ -39,8 +39,28 @@ This gets the positions of open and closed orders, or open only.
 
 ##### Example code
 
+The below code grabs the current open positions
+
 ```javascript
-t.position({siteprefix: "www", isopen: true}, function(c) {
-  console.log(c);
-})
+bitmex.position({siteprefix: "www", isopen: true}, function(c) {
+  if (c.message == "Done") {
+    for (var i = 0; i < c.position.length; i++) {
+      var row = c.position[i];
+
+      var symbol = row["symbol"];
+      var currency = row["currency"];
+      var underlyingCurrency = row["underlying"];
+      var contractsCount = row["currentQty"];
+      var realisedPnl = row["realisedPnl"];
+      var unrealisedPnl = row["unrealisedPnl"];
+      var openStatus = row["isOpen"];
+      var costPrice = row["avgCostPrice"];
+      var breakEvenPrice = row["breakEvenPrice"];
+      var lastPrice = row["lastPrice"];
+      var leverage = row["leverage"]
+
+      console.log("Instrument: " + symbol + " (" + underlyingCurrency + " bought with " + currency + ") QTY=" + contractsCount.toString() + " Open=" + openStatus.toString() + " bought at=" + costPrice.toString() + " currently: " + lastPrice.toString() + " (P/L: Realised: " + (realisedPnl / 100000).toString() + " mBTC Unrealised: " + (unrealisedPnl / 100000).toString() + " mBTC)");
+    }
+  }
+});
 ```
