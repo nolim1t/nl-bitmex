@@ -8,7 +8,7 @@ All contributions are welcome and appreciated. Open Source is a meritocracy who 
 
 * Issues
 * Pull Requests
-* Donations (BTC: [14qd36n1viYAWzajZgaTQq4tPUZcEUtfcz](http://blockr.io/address/info/14qd36n1viYAWzajZgaTQq4tPUZcEUtfcz) / LTC: [LSGfxUoJSC3qYsTC6DwyvKvYfDwTVXrcE2](http://ltc.blockr.io/address/info/LSGfxUoJSC3qYsTC6DwyvKvYfDwTVXrcE2) / [Dollars](https://donate.nolim1t.co)) 
+* Donations (BTC: [14qd36n1viYAWzajZgaTQq4tPUZcEUtfcz](http://blockr.io/address/info/14qd36n1viYAWzajZgaTQq4tPUZcEUtfcz) / LTC: [LSGfxUoJSC3qYsTC6DwyvKvYfDwTVXrcE2](http://ltc.blockr.io/address/info/LSGfxUoJSC3qYsTC6DwyvKvYfDwTVXrcE2) / [Dollars](https://donate.nolim1t.co))
 
 ## Example code
 
@@ -67,8 +67,12 @@ bitmex.position({siteprefix: "www", isopen: true}, function(c) {
       var lastPrice = row["lastPrice"];
       var leverage = row["leverage"]
 
-      console.log("Instrument: " + symbol + " (" + underlyingCurrency + " bought with " + currency + ") QTY=" + contractsCount.toString() + " Open=" + openStatus.toString() + " bought at=" + costPrice.toString() + " currently: " + lastPrice.toString() + " (P/L: Realised: " + (realisedPnl / 100000).toString() + " mBTC Unrealised: " + (unrealisedPnl / 100000).toString() + " mBTC)");
+      console.log("Instrument (#" + (i + 1).toString() + "): " + symbol + " (" + underlyingCurrency + " bought with " + currency + ") QTY=" + contractsCount.toString() + " Open=" + openStatus.toString() + " bought at=" + costPrice.toString() + " currently: " + lastPrice.toString() + " (P/L: Realised: " + (realisedPnl / 100000).toString() + " mBTC Unrealised: " + (unrealisedPnl / 100000).toString() + " mBTC)");
     }
+  } else if (c.message == "Error") {
+    console.log("An error has occured: " + c.error);
+  } else {
+    console.log(c.message);
   }
 });
 ```
