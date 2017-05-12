@@ -1,6 +1,6 @@
 {
   "name": "nl-bitmex",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "My own bitmex library",
   "main": "index.js",
   "dependencies": {
