@@ -4,6 +4,13 @@
 
 My own bitmex library. Reference library [here](https://github.com/BitMEX/api-connectors/blob/master/official-http/node-request/index.js)
 
+## Installing
+
+```bash
+npm i nl-bitmex
+```
+
+
 ## Contributing
 
 All contributions are welcome and appreciated. Open Source is a meritocracy who doesn't care who you are.
