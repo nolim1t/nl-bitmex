@@ -1,5 +1,7 @@
 # BitMex library
 
+[![npm version](https://badge.fury.io/js/nl-bitmex.svg)](https://badge.fury.io/js/nl-bitnex)
+
 My own bitmex library. Reference library [here](https://github.com/BitMEX/api-connectors/blob/master/official-http/node-request/index.js)
 
 ## Contributing
