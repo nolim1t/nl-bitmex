@@ -11,6 +11,10 @@ npm i nl-bitmex --save
 ```
 
 
+## Disclaimers
+
+As always, please test your code out on [testnet](https://testnet.bitmex.com) before going live just to make sure there's no bugs in this library.
+
 ## Contributing
 
 All contributions are welcome and appreciated. Open Source is a meritocracy who doesn't care who you are.
