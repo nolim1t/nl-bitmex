@@ -53,6 +53,20 @@ bitmex.orders({siteprefix: "www"}, function(c) {
 });
 ```
 
+### Adjust leverage
+
+```javascript
+bitmex.customprivate({siteprefix: "testnet", endpoint: "position/leverage", method: "POST", symbol: "ETHM17", leverage: 50,  apikey: "", apisecret: ""}, (cb) => {
+  if (cb.message == "Done") {
+    console.log(cb.result);
+  } else if (cb.message == "Error") {
+    console.log(cb.error);
+  } else {
+    console.log(cb.message);
+  }
+});
+```
+
 ### Place an order
 
 ```javascript
@@ -61,7 +75,34 @@ bitmex.customprivate({siteprefix: "www", endpoint: "order", method: "POST", symb
 });
 ```
 
-### Cancel an Order
+### Place a stop market
+
+```javascript
+bitmex.customprivate({siteprefix: "testnet", endpoint: "order", method: "POST", symbol: "ETHM17", orderQty: -5, ordType: "Stop", stopPx: "0.141", side: "Sell",  apikey: "", apisecret: ""}, (cb) => {
+  if (cb.message == "Done") {
+    console.log(cb.result);
+  } else if (cb.message == "Error") {
+    console.log(cb.error);
+  } else {
+    console.log(cb.message);
+  }
+});
+```
+
+### Place a take profit market Sell
+
+```javascript
+bitmex.customprivate({siteprefix: "testnet", endpoint: "order", method: "POST", symbol: "ETHM17", orderQty: -5, ordType: "MarketIfTouched", stopPx: "0.145", side: "Sell",  apikey: "", apisecret: ""}, (cb) => {
+  if (cb.message == "Done") {
+    console.log(cb.result);
+  } else if (cb.message == "Error") {
+    console.log(cb.error);
+  } else {
+    console.log(cb.message);
+  }
+});
+```
+### Cancel an Order (As long as its not filled)
 
 ```javascript
 bitmex.customprivate({siteprefix: "www", endpoint: "order", method: "DELETE", querystring: "orderID=THEORDERID", apikey: "", apisecret: ""}, (cb) => {
