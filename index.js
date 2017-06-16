@@ -16,5 +16,10 @@ module.exports = {
     privateapi.getposition(info, (positioncb) => {
       callback(positioncb);
     })
+  },
+  customprivate: (info, callback) => {
+    privateapi.customrequest(info, (customcb) => {
+      callback(customcb);
+    });
   }
 };

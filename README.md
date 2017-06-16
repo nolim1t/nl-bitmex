@@ -21,6 +21,20 @@ All contributions are welcome and appreciated. Open Source is a meritocracy who 
 
 ## Example code
 
+### Custom Requests
+
+```javascript
+// Get the contents of the users bitcoin wallet
+bitmex.customprivate({siteprefix: "www", endpoint: "user/wallet", querystring: "currency=XBt", apikey: "r", apisecret: ""}, (cb) => {
+  console.log(cb);
+});
+
+// Get deposit addresss
+bitmex.customprivate({siteprefix: "www", endpoint: "user/depositAddress", apikey: "", apisecret: ""}, (cb) => {
+  console.log(cb);
+});
+```
+
 ### Orders
 
 #### Get Open orders
@@ -36,6 +50,14 @@ All contributions are welcome and appreciated. Open Source is a meritocracy who 
 ```javascript
 bitmex.orders({siteprefix: "www"}, function(c) {
   console.log(c);
+});
+```
+
+### Cancel an Order
+
+```javascript
+bitmex.customprivate({siteprefix: "www", endpoint: "order", method: "DELETE", querystring: "orderID=THEORDERID", apikey: "", apisecret: ""}, (cb) => {
+  console.log(cb);
 });
 ```
 

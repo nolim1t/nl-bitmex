@@ -4,6 +4,7 @@
   "description": "My own bitmex library",
   "main": "index.js",
   "dependencies": {
+    "assign-obj-params": "^1.0.0",
     "fuckingundefinedemptynull": "^1.0.0",
     "request": "^2.81.0"
   },
