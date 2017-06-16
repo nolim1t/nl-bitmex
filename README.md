@@ -81,6 +81,20 @@ bitmex.customprivate({siteprefix: "www", endpoint: "order", method: "POST", symb
 });
 ```
 
+### Place orders in bulk
+
+```javascript
+bitmex.customprivate({siteprefix: "testnet", endpoint: "order/bulk", method: "POST", orders: JSON.stringify([{symbol: "ETHM17", orderQty: 1, ordType: "Market", side: "Buy"}, {symbol: "ETHM17", orderQty: 1, ordType: "Market", side: "Buy"}]),  apikey: "xpdWaDC-40cQFxeJVzGqBsl9", apisecret: ""}, (cb) => {
+  if (cb.message == "Done") {
+    console.log(cb.result);
+  } else if (cb.message == "Error") {
+    console.log(cb.error);
+  } else {
+    console.log(cb.message);
+  }
+});
+```
+
 ### Place a stop market
 
 ```javascript
