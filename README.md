@@ -53,6 +53,14 @@ bitmex.orders({siteprefix: "www"}, function(c) {
 });
 ```
 
+### Place an order
+
+```javascript
+bitmex.customprivate({siteprefix: "www", endpoint: "order", method: "POST", symbol: "XBTUSD", orderQty: 1, apikey: "", apisecret: ""}, (cb) => {
+  console.log(cb);
+});
+```
+
 ### Cancel an Order
 
 ```javascript
