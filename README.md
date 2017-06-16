@@ -7,7 +7,7 @@ My own bitmex library. Reference library [here](https://github.com/BitMEX/api-co
 ## Installing
 
 ```bash
-npm i nl-bitmex
+npm i nl-bitmex --save
 ```
 
 
@@ -20,6 +20,12 @@ All contributions are welcome and appreciated. Open Source is a meritocracy who 
 * Donations (BTC: [14qd36n1viYAWzajZgaTQq4tPUZcEUtfcz](http://blockr.io/address/info/14qd36n1viYAWzajZgaTQq4tPUZcEUtfcz) / LTC: [LSGfxUoJSC3qYsTC6DwyvKvYfDwTVXrcE2](http://ltc.blockr.io/address/info/LSGfxUoJSC3qYsTC6DwyvKvYfDwTVXrcE2) / [Dollars](https://donate.nolim1t.co))
 
 ## Example code
+
+### Initializing
+
+```javascript
+const bitmex = require('nl-bitmex');
+```
 
 ### Custom Requests
 
