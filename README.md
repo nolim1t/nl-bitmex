@@ -21,8 +21,7 @@ All contributions are welcome and appreciated. Open Source is a meritocracy who 
 
 * Issues
 * Pull Requests
-* Donations (BTC: [14qd36n1viYAWzajZgaTQq4tPUZcEUtfcz](http://blockr.io/address/info/14qd36n1viYAWzajZgaTQq4tPUZcEUtfcz) / LTC: [LSGfxUoJSC3qYsTC6DwyvKvYfDwTVXrcE2](http://ltc.blockr.io/address/info/LSGfxUoJSC3qYsTC6DwyvKvYfDwTVXrcE2) / [Dollars](https://donate.nolim1t.co))
-
+* Donations (BTC: [Tippin.me](https://tippin.me/@nolim1t) | Trading on bitmex [referral](https://www.bitmex.com/register/TjGKqo) saving you fees and giving me a little discount too)
 ## Example code
 
 ### Initializing
